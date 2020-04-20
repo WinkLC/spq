@@ -16,11 +16,12 @@ Running Ubuntu on a virtual machine installed on a macOS or Windows machine is a
 ## How to Run
 Once properly installed, follow these steps to run the program.
 - Navigate to the ns-3-dev directory `$ cd ns-3-allinone/ns-3-dev`
-- Configure the waf `$ ./waf configure`
+- Configure the waf `$ ./waf -d debug configure`
 - Build the executable `$ ./waf build`
 - From here there are 2 option, run and SQP or DRR simulation
     - SQP `./waf --run "spq --i=scratch/spq.json"`
     - DRR `./waf --run "drr --i=scratch/drr.json"`
+    - MYSPQ `./waf --run "myspq --inputCount=4 --outputCount=2" 2>log.log`
 
 ## Additional Options when Running
 Additionally, there is a configuration file for both the SPQ and DRR simulations.
